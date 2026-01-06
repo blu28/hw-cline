@@ -56,7 +56,9 @@ out/
 nb-configuration.xml
 
 # Visual Studio Code
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
 *.code-workspace
 
 # OS generated files

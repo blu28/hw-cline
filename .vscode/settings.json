@@ -1,0 +1,42 @@
+{
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-25",
+      "path": "C:\\Program Files\\Java\\jdk-25",
+      "default": true
+    }
+  ],
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.server.launchMode": "Standard",
+  "java.project.sourcePaths": [
+    "src/main/java",
+    "src/test/java"
+  ],
+  "java.project.outputPath": "target/classes",
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "C:\\Program Files\\JavaFX\\javafx-sdk-25.0.1\\lib\\*.jar"
+  ],
+  "java.format.settings.url": ".vscode/java-formatter.xml",
+  "java.format.settings.profile": "GoogleStyle",
+  "java.saveActions.organizeImports": true,
+  "java.completion.importOrder": [
+    "java",
+    "javax",
+    "com",
+    "org"
+  ],
+  "java.project.exportJar.targetPath": "target/${workspaceFolderBasename}.jar",
+  "java.project.exportJar.mainClass": "com.example.helloworld.Main",
+  "java.debug.settings.enableRunDebugCodeLens": true,
+  "java.test.config": {
+    "vmArgs": [
+      "--module-path",
+      "\"C:/Program Files/JavaFX/javafx-sdk-25.0.1/lib\"",
+      "--add-modules",
+      "javafx.controls,javafx.fxml"
+    ]
+  },
+  "java.test.defaultConfig": "Maven"
+}
