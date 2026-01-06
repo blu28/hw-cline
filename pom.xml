@@ -14,8 +14,8 @@
     <description>A simple JavaFX application with Hello World dialog</description>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <javafx.sdk.path>C:/Program Files/JavaFX/javafx-sdk-25.0.1</javafx.sdk.path>
         <javafx.jmods.path>C:/Program Files/JavaFX/javafx-jmods-25.0.1</javafx.jmods.path>
@@ -48,8 +48,8 @@
                             <goal>compile</goal>
                         </goals>
                         <configuration>
-                            <source>21</source>
-                            <target>21</target>
+                            <source>25</source>
+                            <target>25</target>
                             <compilerArgs>
                                 <arg>--module-path</arg>
                                 <arg>${javafx.sdk.path}/lib</arg>
@@ -65,8 +65,8 @@
                             <goal>testCompile</goal>
                         </goals>
                         <configuration>
-                            <source>21</source>
-                            <target>21</target>
+                            <source>25</source>
+                            <target>25</target>
                             <compilerArgs>
                                 <arg>--module-path</arg>
                                 <arg>${javafx.sdk.path}/lib</arg>
