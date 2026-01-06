@@ -32,7 +32,7 @@ This is a basic JavaFX application that demonstrates the fundamental structure o
 
 Before running this application, ensure you have the following installed:
 
-- **Java Development Kit (JDK) 21** or later
+- **Java Development Kit (JDK) 25**
   - Download from: https://adoptium.net/
 - **Apache Maven 3.6+**
   - Download from: https://maven.apache.org/download.cgi
@@ -41,7 +41,7 @@ Before running this application, ensure you have the following installed:
 
 ### Environment Setup
 
-1. Install JDK 21 and set `JAVA_HOME` environment variable
+1. Install JDK 25 and set `JAVA_HOME` environment variable
 2. Install Apache Maven and ensure `mvn` command is available in PATH
 3. Download and extract JavaFX SDK to a known location (e.g., `C:\Program Files\JavaFX\javafx-sdk-25.0.1`)
 
@@ -131,7 +131,7 @@ hw-cline/
 
 ## 🛠 Technologies Used
 
-- **Java 21** - Programming language and runtime
+- **Java 25** - Programming language and runtime
 - **JavaFX 25.0.1** - GUI framework for desktop applications
 - **JUnit 5.10.0** - Testing framework
 - **Maven 3.11.0** - Build automation and dependency management
@@ -149,7 +149,7 @@ Due to JavaFX module dependencies, unit tests are run in classpath mode (non-mod
 The application uses `--enable-native-access=javafx.graphics` to allow JavaFX native graphics access, which is required for modern JavaFX applications.
 
 ### Build Configuration
-- Source/target compatibility: Java 21
+- Source/target compatibility: Java 25
 - UTF-8 encoding for source files
 - Modular compilation with JavaFX module path
 
@@ -171,7 +171,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 1. **"Module javafx.controls not found"**
    - Ensure JavaFX SDK is installed and path is correct in `pom.xml`
-   - Verify `JAVA_HOME` is set to JDK 21+
+   - Verify `JAVA_HOME` is set to JDK 25
 
 2. **"mvn command not found"**
    - Install Apache Maven and add to PATH
