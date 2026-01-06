@@ -1,10 +1,11 @@
 package com.example.helloworld;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -12,7 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Label label = new Label("Hello World!");
+        javafx.scene.control.Label label = new javafx.scene.control.Label("Hello World!");
         Button quitButton = new Button("Quit");
 
         quitButton.setOnAction(e -> Platform.exit());
@@ -26,6 +27,12 @@ public class Main extends Application {
         primaryStage.setTitle("Hello World Dialog");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        // Auto-exit after 30 seconds
+        Timeline timeline = new Timeline(new KeyFrame(
+            javafx.util.Duration.seconds(30),
+            ae -> Platform.exit()));
+        timeline.play();
     }
 
     public static void main(String[] args) {
