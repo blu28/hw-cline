@@ -69,7 +69,7 @@
                             <target>21</target>
                             <compilerArgs>
                                 <arg>--module-path</arg>
-                                <arg>"C:/Program Files/JavaFX/javafx-sdk-25.0.1/lib"</arg>
+                                <arg>${javafx.sdk.path}/lib</arg>
                                 <arg>--add-modules</arg>
                                 <arg>javafx.controls,javafx.fxml</arg>
                                 <arg>--add-reads</arg>
@@ -83,6 +83,13 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.version}</version>
+                <configuration>
+                    <argLine>
+                        --module-path "${javafx.sdk.path}/lib"
+                        --add-modules javafx.controls,javafx.fxml
+                        --add-reads com.example.helloworld=ALL-UNNAMED
+                    </argLine>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
