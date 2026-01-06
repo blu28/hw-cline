@@ -1,0 +1,4 @@
+--patch-module
+com.example.helloworld=_
+--add-reads
+com.example.helloworld=ALL-UNNAMED
