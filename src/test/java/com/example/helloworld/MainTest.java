@@ -1,17 +1,20 @@
 package com.example.helloworld;
 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
 /**
  * Unit tests for the Main JavaFX application class.
  * Note: These are basic structure tests since full JavaFX UI testing
  * requires TestFX framework and special headless configuration.
  */
-public class MainTest {
+class MainTest {
 
     /**
      * Simple test to verify JUnit is working.
      */
     @Test
-    public void testJUnitSetup() {
+    void testJUnitSetup() {
         System.out.println("Running testJUnitSetup - JUnit test framework is working");
         assertTrue(true, "JUnit test framework is working");
     }
@@ -21,7 +24,7 @@ public class MainTest {
      * This is a basic smoke test to ensure the build and test setup is working.
      */
     @Test
-    public void testClassLoading() {
+    void testClassLoading() {
         // This test just verifies that we can load classes from the classpath
         // without requiring JavaFX modules at compile time
         assertDoesNotThrow(() -> {
@@ -34,7 +37,7 @@ public class MainTest {
      * This verifies that the class is properly defined after adding auto-exit functionality.
      */
     @Test
-    public void testMainClassStructure() {
+    void testMainClassStructure() {
         assertDoesNotThrow(() -> {
             // Verify the Main class exists and has the expected methods
             Class<?> mainClass = Class.forName("com.example.helloworld.Main");
@@ -55,7 +58,7 @@ public class MainTest {
      * This tests the logic behind the 30-second timeout without requiring JavaFX.
      */
     @Test
-    public void testAutoExitTimeoutValue() {
+    void testAutoExitTimeoutValue() {
         // Test that 30 seconds is a reasonable timeout value
         int timeoutSeconds = 30;
         assertTrue(timeoutSeconds > 0, "Timeout should be positive");
@@ -68,7 +71,7 @@ public class MainTest {
      * This verifies that the code changes don't break compilation.
      */
     @Test
-    public void testApplicationCompilesWithAutoExit() {
+    void testApplicationCompilesWithAutoExit() {
         assertDoesNotThrow(() -> {
             // If we get here, the application compiled successfully with auto-exit code
             // This test passes if the build process works

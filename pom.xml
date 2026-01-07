@@ -19,12 +19,39 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <javafx.sdk.path>C:/Program Files/JavaFX/javafx-sdk-25.0.1</javafx.sdk.path>
         <javafx.jmods.path>C:/Program Files/JavaFX/javafx-jmods-25.0.1</javafx.jmods.path>
+        <javafx.version>17.0.2</javafx.version>
         <junit.version>5.10.0</junit.version>
         <maven.surefire.version>3.1.2</maven.surefire.version>
         <maven.failsafe.version>3.1.2</maven.failsafe.version>
     </properties>
 
     <dependencies>
+        <!-- JavaFX Dependencies -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-base</artifactId>
+            <version>${javafx.version}</version>
+            <classifier>win</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>${javafx.version}</version>
+            <classifier>win</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+            <classifier>win</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+            <classifier>win</classifier>
+        </dependency>
+        
         <!-- Test Dependencies -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -68,8 +95,10 @@
                             <source>25</source>
                             <target>25</target>
                             <compilerArgs>
-                                <arg>--class-path</arg>
-                                <arg>${project.build.outputDirectory}</arg>
+                                <arg>--module-path</arg>
+                                <arg>${javafx.sdk.path}/lib;${project.build.outputDirectory}</arg>
+                                <arg>--add-modules</arg>
+                                <arg>javafx.controls,javafx.fxml</arg>
                             </compilerArgs>
                         </configuration>
                     </execution>
