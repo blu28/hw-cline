@@ -10,7 +10,7 @@
   "java.server.launchMode": "Standard",
   "java.project.referencedLibraries": [
     "lib/**/*.jar",
-    "C:\\Program Files\\JavaFX\\javafx-sdk-25.0.1\\lib\\*.jar"
+    "C:/Program Files/JavaFX/javafx-sdk-25.0.1/lib/*.jar"
   ],
   "java.saveActions.organizeImports": true,
   "java.completion.importOrder": [
